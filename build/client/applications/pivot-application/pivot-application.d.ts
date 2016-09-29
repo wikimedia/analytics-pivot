@@ -1,0 +1,70 @@
+import * as React from 'react';
+import * as ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { DataCube, AppSettings, User, Collection, Essence, Timekeeper, ViewSupervisor } from '../../../common/models/index';
+import { AboutModal } from '../../modals/index';
+import { SideDrawer, Notifications, Questions } from '../../components/index';
+export interface PivotApplicationProps extends React.Props<any> {
+    version: string;
+    user?: User;
+    maxFilters?: number;
+    maxSplits?: number;
+    appSettings: AppSettings;
+    initTimekeeper?: Timekeeper;
+    stateful?: boolean;
+}
+export interface PivotApplicationState {
+    AboutModalAsync?: typeof AboutModal;
+    NotificationsAsync?: typeof Notifications;
+    QuestionsAsync?: typeof Questions;
+    ReactCSSTransitionGroupAsync?: typeof ReactCSSTransitionGroup;
+    SideDrawerAsync?: typeof SideDrawer;
+    appSettings?: AppSettings;
+    timekeeper?: Timekeeper;
+    drawerOpen?: boolean;
+    selectedItem?: DataCube | Collection;
+    viewType?: ViewType;
+    viewHash?: string;
+    showAboutModal?: boolean;
+    showAddCollectionModal?: boolean;
+    essenceToAddToACollection?: Essence;
+    cubeViewSupervisor?: ViewSupervisor;
+}
+export declare type ViewType = "home" | "cube" | "collection" | "link" | "settings" | "no-data";
+export declare const HOME: ViewType;
+export declare const CUBE: ViewType;
+export declare const COLLECTION: ViewType;
+export declare const LINK: ViewType;
+export declare const SETTINGS: ViewType;
+export declare const NO_DATA: ViewType;
+export declare class PivotApplication extends React.Component<PivotApplicationProps, PivotApplicationState> {
+    private hashUpdating;
+    private sideBarHrefFn;
+    private collectionViewDelegate;
+    constructor();
+    componentWillMount(): void;
+    viewTypeNeedsAnItem(viewType: ViewType): boolean;
+    componentDidMount(): void;
+    componentWillUnmount(): void;
+    globalHashChangeListener(): void;
+    hashToState(hash: string): void;
+    parseHash(hash: string): string[];
+    getViewTypeFromHash(hash: string): ViewType;
+    getSelectedItemFromHash(items: (DataCube | Collection)[], hash: string, viewType: ViewType): DataCube | Collection;
+    getViewHashFromHash(hash: string): string;
+    sideDrawerOpen(drawerOpen: boolean): void;
+    changeHash(hash: string, force?: boolean): void;
+    updateViewHash(viewHash: string, force?: boolean): void;
+    getUrlPrefix(baseOnly?: boolean): string;
+    openAboutModal(): void;
+    onAboutModalClose(): void;
+    onSettingsChange(newSettings: AppSettings): void;
+    addEssenceToCollection(essence: Essence): void;
+    renderAddCollectionModal(): JSX.Element;
+    renderAboutModal(): JSX.Element;
+    renderNotifications(): JSX.Element;
+    renderQuestions(): JSX.Element;
+    renderSideDrawer(): JSX.Element;
+    renderSideDrawerTransition(): JSX.Element;
+    renderView(): JSX.Element;
+    render(): JSX.Element;
+}

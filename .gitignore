@@ -5,7 +5,6 @@
 /.sass-cache/
 /imply-pivot-*.tgz
 /node_modules/
-/build/
 /public/
 /private/
 /coverage/
