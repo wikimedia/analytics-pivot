@@ -1,9 +1,1 @@
-"use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(require('./requester/requester'));
-__export(require('./settings-store/settings-store'));
-__export(require('./file/file'));
-__export(require('./settings-manager/settings-manager'));
-__export(require('./updater/updater'));
+"use strict";function __export(e){for(var r in e)if(!exports.hasOwnProperty(r))exports[r]=e[r]}Object.defineProperty(exports,"__esModule",{value:true});__export(require("./requester/requester"));__export(require("./state-store/state-store"));__export(require("./state-store/mysql-state-store"));__export(require("./settings-store/settings-store"));__export(require("./file/file"));__export(require("./settings-manager/settings-manager"));__export(require("./token-manager/token-manager"));__export(require("./license-manager/license-manager"));

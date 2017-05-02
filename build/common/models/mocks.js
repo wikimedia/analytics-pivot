@@ -1,10 +1,1 @@
-"use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(require('./essence/essence.mock'));
-__export(require('./timekeeper/timekeeper.mock'));
-__export(require('./dimension/dimension.mock'));
-__export(require('./data-cube/data-cube.mock'));
-__export(require('./stage/stage.mock'));
-__export(require('./sort-on/sort-on.mock'));
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var beltful_1=require("@implydata/beltful");var app_settings_mock_1=require("./app-settings/app-settings.mock");var data_cube_mock_1=require("./data-cube/data-cube.mock");var dimension_mock_1=require("./dimension/dimension.mock");var essence_mock_1=require("./essence/essence.mock");var sort_on_mock_1=require("./sort-on/sort-on.mock");var timekeeper_mock_1=require("./timekeeper/timekeeper.mock");exports.MOCKS={AppSettingsMock:app_settings_mock_1.AppSettingsMock,EssenceMock:essence_mock_1.EssenceMock,TimekeeperMock:timekeeper_mock_1.TimekeeperMock,DimensionMock:dimension_mock_1.DimensionMock,DataCubeMock:data_cube_mock_1.DataCubeMock,StageMock:beltful_1.StageMock,SortOnMock:sort_on_mock_1.SortOnMock};

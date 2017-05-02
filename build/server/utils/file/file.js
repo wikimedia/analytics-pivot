@@ -1,15 +1,1 @@
-"use strict";
-var fs = require('fs');
-var yaml = require('js-yaml');
-function loadFileSync(filepath, postProcess) {
-    if (postProcess === void 0) { postProcess = null; }
-    var fileData = fs.readFileSync(filepath, 'utf-8');
-    if (postProcess === 'json') {
-        fileData = JSON.parse(fileData);
-    }
-    else if (postProcess === 'yaml') {
-        fileData = yaml.safeLoad(fileData);
-    }
-    return fileData;
-}
-exports.loadFileSync = loadFileSync;
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var fs=require("fs");var yaml=require("js-yaml");function loadFileSync(e,r){if(r===void 0){r=null}var l=fs.readFileSync(e,"utf-8");if(r==="json"){l=JSON.parse(l)}else if(r==="yaml"){l=yaml.safeLoad(l)}return l}exports.loadFileSync=loadFileSync;

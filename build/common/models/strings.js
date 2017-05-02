@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.STRINGS={current:"Current",day:"Day",days:"Days",hour:"Hour",hours:"Hours",invitationLink:"Invitation Link",latest:"Latest",month:"Month",ok:"OK",passwordReset:"Password Reset",previous:"Previous",quarter:"Quarter",week:"Week",year:"Year",yes:"Yes"};

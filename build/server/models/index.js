@@ -1,6 +1,1 @@
-"use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(require('./server-settings/server-settings'));
-__export(require('./settings-location/settings-location'));
+"use strict";function __export(e){for(var t in e)if(!exports.hasOwnProperty(t))exports[t]=e[t]}Object.defineProperty(exports,"__esModule",{value:true});__export(require("./server-settings/server-settings"));__export(require("./settings-location/settings-location"));

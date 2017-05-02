@@ -1,7 +1,1 @@
-"use strict";
-var express_1 = require('express');
-var router = express_1.Router();
-router.get('/', function (req, res) {
-    res.send("I am healthy @ " + new Date().toISOString());
-});
-module.exports = router;
+"use strict";var nike_hercules_1=require("@implydata/nike-hercules");var router=nike_hercules_1.HerculesServer.makeRouter();router.get("/",function(e,r){r.send("I am healthy @ "+(new Date).toISOString())});module.exports=router;

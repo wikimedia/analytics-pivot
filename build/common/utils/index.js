@@ -1,11 +1,1 @@
-"use strict";
-function __export(m) {
-    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-__export(require('./object/object'));
-__export(require('./formatter/formatter'));
-__export(require('./general/general'));
-__export(require('./parser/parser'));
-__export(require('./time/time'));
-__export(require('./immutable-utils/immutable-utils'));
-__export(require('./yaml-helper/yaml-helper'));
+"use strict";function __export(e){for(var r in e)if(!exports.hasOwnProperty(r))exports[r]=e[r]}Object.defineProperty(exports,"__esModule",{value:true});__export(require("./general/general"));__export(require("./parser/parser"));__export(require("./time/time"));__export(require("./immutable-utils/immutable-utils"));

@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,"__esModule",{value:true});var tslib_1=require("tslib");var events_1=require("events");var StateStore=function(e){tslib_1.__extends(t,e);function t(t,r){var s=e.call(this)||this;s.logger=t;s.settingsLocation=r;return s}return t}(events_1.EventEmitter);exports.StateStore=StateStore;
